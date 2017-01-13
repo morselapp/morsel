@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: com.example
+Build-Jdk: 1.8.0_101
+Built-By: kunalsingh.k
+Created-By: IntelliJ IDEA
+
