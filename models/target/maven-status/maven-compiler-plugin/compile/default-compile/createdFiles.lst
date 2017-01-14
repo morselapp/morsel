@@ -1,0 +1,7 @@
+com/morsel/models/MenuItem.class
+com/morsel/models/Menu.class
+com/morsel/models/User.class
+com/morsel/models/Order.class
+com/morsel/models/Address.class
+com/morsel/models/Cart.class
+com/morsel/models/CartItem.class
