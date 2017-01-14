@@ -15,6 +15,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="com.morsel.resources" target="1.5" />
+      <module name="com.morselArtifactId" target="1.5" />
       <module name="dao" target="1.5" />
       <module name="DropwizardTest" target="1.5" />
       <module name="models" target="1.5" />

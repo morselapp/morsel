@@ -1,7 +1,5 @@
-/Users/kunalsingh.k/git-repo/DropwizardTest/models/src/main/java/com/morsel/models/Order.java
-/Users/kunalsingh.k/git-repo/DropwizardTest/models/src/main/java/com/morsel/models/Cart.java
-/Users/kunalsingh.k/git-repo/DropwizardTest/models/src/main/java/com/morsel/models/Address.java
-/Users/kunalsingh.k/git-repo/DropwizardTest/models/src/main/java/com/morsel/models/MenuItem.java
-/Users/kunalsingh.k/git-repo/DropwizardTest/models/src/main/java/com/morsel/models/Menu.java
-/Users/kunalsingh.k/git-repo/DropwizardTest/models/src/main/java/com/morsel/models/User.java
-/Users/kunalsingh.k/git-repo/DropwizardTest/models/src/main/java/com/morsel/models/CartItem.java
+/Users/kunalsingh.k/git-repo/morsel/models/src/main/java/com/morsel/models/Address.java
+/Users/kunalsingh.k/git-repo/morsel/models/src/main/java/com/morsel/models/OrderItem.java
+/Users/kunalsingh.k/git-repo/morsel/models/src/main/java/com/morsel/models/User.java
+/Users/kunalsingh.k/git-repo/morsel/models/src/main/java/com/morsel/models/MenuItem.java
+/Users/kunalsingh.k/git-repo/morsel/models/src/main/java/com/morsel/models/Order.java
