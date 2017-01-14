@@ -10,7 +10,7 @@ import javax.persistence.Id;
  */
 
 @Entity
-public class User {
+public class User implements Model {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

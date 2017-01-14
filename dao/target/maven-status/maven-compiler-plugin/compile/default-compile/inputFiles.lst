@@ -1,4 +1,5 @@
-/home/ajeet/morsel/dao/src/main/java/UserDao.java
-/home/ajeet/morsel/dao/src/main/java/AddressDao.java
-/home/ajeet/morsel/dao/src/main/java/OrderItemDao.java
-/home/ajeet/morsel/dao/src/main/java/OrderDao.java
+/home/ajeet/morsel/dao/src/main/java/com/morsel/dao/AddressDao.java
+/home/ajeet/morsel/dao/src/main/java/com/morsel/dao/GlobalDao.java
+/home/ajeet/morsel/dao/src/main/java/com/morsel/dao/UserDao.java
+/home/ajeet/morsel/dao/src/main/java/com/morsel/dao/OrderDao.java
+/home/ajeet/morsel/dao/src/main/java/com/morsel/dao/OrderItemDao.java

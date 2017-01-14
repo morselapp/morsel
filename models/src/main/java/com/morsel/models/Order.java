@@ -8,7 +8,7 @@ import javax.persistence.Id;
 
 
 @Entity
-public class Order {
+public class Order implements Model{
 
     @Id
     private int id;

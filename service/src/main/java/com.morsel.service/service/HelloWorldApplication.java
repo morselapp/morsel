@@ -1,6 +1,8 @@
 package com.morsel.service.service;
 
+import com.morsel.dao.UserDao;
 import com.morsel.models.*;
+import com.morsel.service.UserResource;
 import com.morsel.service.config.HelloWorldConfiguration;
 import com.morsel.service.HelloWorldResource;
 import com.morsel.service.TemplateHealthCheck;
@@ -40,6 +42,7 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
         final HelloWorldResource resource = new HelloWorldResource(helloWorldConfiguration.getTemplate(), helloWorldConfiguration.getDefaultName());
         final TemplateHealthCheck healthCheck = new TemplateHealthCheck();
         environment.healthChecks().register("template", healthCheck);
+        environment.jersey().register(UserResource.class);
         environment.jersey().register(resource);
     }
 }

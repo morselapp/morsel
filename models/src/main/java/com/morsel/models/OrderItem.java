@@ -10,7 +10,7 @@ import javax.persistence.Id;
  */
 
 @Entity
-public class OrderItem {
+public class OrderItem implements Model {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

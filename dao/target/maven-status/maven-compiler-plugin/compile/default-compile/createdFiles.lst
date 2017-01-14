@@ -1,4 +1,5 @@
-AddressDao.class
-OrderDao.class
-UserDao.class
-OrderItemDao.class
+com/morsel/dao/OrderItemDao.class
+com/morsel/dao/UserDao.class
+com/morsel/dao/GlobalDao.class
+com/morsel/dao/AddressDao.class
+com/morsel/dao/OrderDao.class
