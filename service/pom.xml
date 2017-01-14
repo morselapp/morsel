@@ -12,4 +12,12 @@
     <artifactId>com.morsel.service</artifactId>
     <groupId>com.morsel.service</groupId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.morsel.models</groupId>
+            <artifactId>com.morsel.models</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 </project>

@@ -1,1 +1,4 @@
+AddressDao.class
 OrderDao.class
+UserDao.class
+OrderItemDao.class

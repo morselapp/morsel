@@ -1,4 +1,5 @@
 com/morsel/service/HelloWorldResource.class
-com/morsel/service/HelloWorldConfiguration.class
 com/morsel/service/service/HelloWorldApplication.class
 com/morsel/service/TemplateHealthCheck.class
+com/morsel/service/service/HelloWorldApplication$1.class
+com/morsel/service/config/HelloWorldConfiguration.class
