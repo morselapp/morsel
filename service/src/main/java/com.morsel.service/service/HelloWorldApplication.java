@@ -1,6 +1,5 @@
 package com.morsel.service.service;
 
-import com.morsel.dao.UserDao;
 import com.morsel.models.*;
 import com.morsel.service.UserResource;
 import com.morsel.service.config.HelloWorldConfiguration;
@@ -11,7 +10,6 @@ import io.dropwizard.db.DataSourceFactory;
 import io.dropwizard.hibernate.HibernateBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
-import org.hibernate.Hibernate;
 
 /**
  * Created by kunalsingh.k on 07/01/17.
@@ -27,7 +25,7 @@ public class HelloWorldApplication extends Application<HelloWorldConfiguration> 
     public void initialize(Bootstrap<HelloWorldConfiguration> bootstrap) {
         hibernateBundle = new HibernateBundle<HelloWorldConfiguration>(User.class,
                 MenuItem.class,
-                Order.class,
+                FoodOrder.class,
                 OrderItem.class) {
 
             public DataSourceFactory getDataSourceFactory(HelloWorldConfiguration helloWorldConfiguration) {

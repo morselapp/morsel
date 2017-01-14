@@ -1,6 +1,6 @@
 com/morsel/models/OrderItem.class
 com/morsel/models/MenuItem.class
 com/morsel/models/User.class
-com/morsel/models/Order.class
 com/morsel/models/Address.class
 com/morsel/models/Model.class
+com/morsel/models/FoodOrder.class
