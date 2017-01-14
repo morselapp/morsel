@@ -12,6 +12,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="models" />
+    <orderEntry type="module" module-name="dao" />
     <orderEntry type="library" name="Maven: io.dropwizard:dropwizard-core:0.7.1" level="project" />
     <orderEntry type="library" name="Maven: io.dropwizard:dropwizard-util:0.7.1" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.3.0" level="project" />
