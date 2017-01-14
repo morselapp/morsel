@@ -1,2 +1,11 @@
-template : hello %
-defaultName : stranger
+dataSourceFactory:
+  driverClass: com.mysql.jdbc.Driver
+  url: jdbc:mysql://127.0.0.1/morsel
+  user: "morsel"
+  password: "morsel"
+  maxSize: 100
+  properties:
+    hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate.hbm2ddl.auto: create
+    hibernate.generate_statistics: enabled
+    hibernate.show_sql: true

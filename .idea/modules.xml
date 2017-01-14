@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DropwizardTest.iml" filepath="$PROJECT_DIR$/DropwizardTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/resources/com.morsel.resources.iml" filepath="$PROJECT_DIR$/resources/com.morsel.resources.iml" />
       <module fileurl="file://$PROJECT_DIR$/dao/dao.iml" filepath="$PROJECT_DIR$/dao/dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/models/models.iml" filepath="$PROJECT_DIR$/models/models.iml" />
-      <module fileurl="file://$PROJECT_DIR$/resources/resources.iml" filepath="$PROJECT_DIR$/resources/resources.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DropwizardTest.iml" filepath="$PROJECT_DIR$/DropwizardTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/service.iml" filepath="$PROJECT_DIR$/service/service.iml" />
     </modules>
   </component>

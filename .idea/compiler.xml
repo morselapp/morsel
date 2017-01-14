@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="com.morsel.resources" />
         <module name="dao" />
         <module name="models" />
         <module name="resources" />
@@ -13,9 +14,11 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="com.morsel.resources" target="1.5" />
       <module name="dao" target="1.5" />
       <module name="DropwizardTest" target="1.5" />
       <module name="models" target="1.5" />
+      <module name="morsel" target="1.5" />
       <module name="resources" target="1.5" />
       <module name="service" target="1.5" />
     </bytecodeTargetLevel>
