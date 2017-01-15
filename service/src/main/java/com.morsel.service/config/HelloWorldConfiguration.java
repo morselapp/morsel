@@ -39,10 +39,6 @@ public class HelloWorldConfiguration extends io.dropwizard.Configuration{
         return dataSourceFactory;
     }
 
-    public void setDataSourceFactory(DataSourceFactory dataSourceFactory) {
-        this.dataSourceFactory = dataSourceFactory;
-    }
-
     private DataSourceFactory dataSourceFactory = new DataSourceFactory();
 
 }

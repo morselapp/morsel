@@ -21,7 +21,7 @@
       <module name="models" target="1.5" />
       <module name="morsel" target="1.5" />
       <module name="resources" target="1.5" />
-      <module name="service" target="1.5" />
+      <module name="service" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,6 +1,7 @@
 package com.morsel.dao;
 
 import com.morsel.models.Model;
+import io.dropwizard.db.DataSourceFactory;
 import io.dropwizard.hibernate.AbstractDAO;
 import org.hibernate.SessionFactory;
 
