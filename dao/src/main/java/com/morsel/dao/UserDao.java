@@ -1,16 +1,13 @@
 package com.morsel.dao;
 
-import com.morsel.models.Model;
 import com.google.inject.Inject;
-import io.dropwizard.db.DataSourceFactory;
+import io.dropwizard.hibernate.AbstractDAO;
 import org.hibernate.SessionFactory;
-
-import javax.activation.DataSource;
 
 /**
  * Created by ajeet on 14/1/17.
  */
-public class UserDao extends GlobalDao<Model> {
+public class UserDao extends AbstractDAO<UserDao> {
 
     @Inject
     public UserDao(SessionFactory sessionFactory) {

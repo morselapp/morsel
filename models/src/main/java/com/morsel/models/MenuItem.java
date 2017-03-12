@@ -4,13 +4,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.io.Serializable;
 
 /**
  * Created by ajeet on 14/1/17.
  */
 
 @Entity
-public class MenuItem implements Model{
+public class MenuItem implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

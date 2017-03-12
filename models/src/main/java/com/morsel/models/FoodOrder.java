@@ -5,10 +5,11 @@ package com.morsel.models;
  */
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.io.Serializable;
 
 
 @Entity
-public class FoodOrder implements Model{
+public class FoodOrder implements Serializable {
 
     @Id
     private int id;
