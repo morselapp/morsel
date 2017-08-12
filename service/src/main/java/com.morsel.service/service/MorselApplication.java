@@ -3,6 +3,7 @@ package com.morsel.service.service;
 import com.google.inject.Stage;
 import com.hubspot.dropwizard.guice.GuiceBundle;
 import com.morsel.models.*;
+import com.morsel.service.ShopSearchResource;
 import com.morsel.service.config.MorselConfiguration;
 import com.morsel.service.MorselResource;
 import com.morsel.service.TemplateHealthCheck;
@@ -14,6 +15,11 @@ import io.dropwizard.hibernate.HibernateBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import flipkart.dsp.santa.dropwizard.logging.RequestContextBundle;
+import org.eclipse.jetty.servlets.CrossOriginFilter;
+
+import javax.servlet.DispatcherType;
+import javax.servlet.FilterRegistration;
+import java.util.EnumSet;
 
 /**
  * Created by kunalsingh.k on 07/01/17.
@@ -52,12 +58,23 @@ public class MorselApplication extends Application<MorselConfiguration> {
 
     @Override
     public void run(MorselConfiguration morselConfiguration, Environment environment) throws Exception {
+
+        final FilterRegistration.Dynamic cors =
+                environment.servlets().addFilter("CORS", CrossOriginFilter.class);
+
+                cors.setInitParameter("allowedOrigins", "*");
+                cors.setInitParameter("allowedHeaders", "*");
+                cors.setInitParameter("allowedMethods", "OPTIONS,GET,PUT,POST,DELETE,HEAD");
+                cors.addMappingForUrlPatterns(EnumSet.allOf(DispatcherType.class), true, "/*");
+
         environment.jersey().setUrlPattern("/api/*");
         //environment.jersey().register(MorselResource.class);
         final MorselResource resource = new MorselResource(morselConfiguration.getTemplate(), morselConfiguration.getDefaultName());
+        final ShopSearchResource shopSearchresource = new ShopSearchResource(morselConfiguration.getTemplate(), morselConfiguration.getDefaultName());
         final TemplateHealthCheck healthCheck = new TemplateHealthCheck();
         environment.healthChecks().register("template", healthCheck);
        // environment.jersey().register(UserResource.class);
         environment.jersey().register(resource);
+        environment.jersey().register(shopSearchresource);
     }
 }
