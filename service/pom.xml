@@ -51,11 +51,6 @@
             <artifactId>dropwizard-assets</artifactId>
             <version>0.7.1</version>
         </dependency>
-        <dependency>
-            <groupId>flipkart.dsp.santa.grumbles</groupId>
-            <artifactId>service</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
             <dependency>
                 <groupId>com.aerospike</groupId>
                 <artifactId>aerospike-client</artifactId>

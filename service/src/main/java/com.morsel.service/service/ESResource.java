@@ -3,8 +3,7 @@ package com.morsel.service.service;
 import org.apache.storm.shade.org.eclipse.jetty.util.ajax.JSON;
 import org.elasticsearch.action.delete.DeleteResponse;
 import org.elasticsearch.action.get.GetResponse;
-import org.elasticsearch.action.search.SearchResponse;
-import org.elasticsearch.action.search.SearchType;
+import org.elasticsearch.action.search.*;
 import org.elasticsearch.client.Client;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.node.Node;
@@ -63,35 +62,21 @@ public class ESResource {
     }
 
     public static void deleteDocument(Client client, String index, String type, String id){
-
         DeleteResponse response = client.prepareDelete(index, type, id).execute().actionGet();
-
         System.out.println("Information on the deleted document:");
-
         System.out.println("Index: " + response.getIndex());
-
         System.out.println("Type: " + response.getType());
-
         System.out.println("Id: " + response.getId());
-
         System.out.println("Version: " + response.getVersion());
-
     }
 
     public static void updateDocument(Client client, String index, String type,
-
                                       String id, String field, String newValue){
-
         Map<String, Object> updateObject = new HashMap<String, Object>();
-
         updateObject.put(field, newValue);
-
         client.prepareUpdate(index, type, id)
-
                 .setScript("ctx._source." + field + "=" + field, ScriptService.ScriptType.FILE)
-
                 .setScriptParams(updateObject).execute().actionGet();
-
     }
 
 
@@ -99,21 +84,27 @@ public class ESResource {
     public static List<Object> searchDocument(Client client, String index, String type,
                                       String field, String value){
 
+        List<Object> resultResponse = new ArrayList<Object>();
         Map<String, String> map = new HashMap<String, String>();
         map.put(field, value);
         SearchResponse response = client.prepareSearch(index)
                 .setTypes(type)
                 .setSearchType(SearchType.DFS_QUERY_THEN_FETCH)
-                .setQuery(QueryBuilders.termQuery(field, value))                 // Query
+                .setQuery(
+                        QueryBuilders.queryStringQuery(value)
+                                .field("shopType")
+                                .field("description")
+                                .field("shopName")
+                                .field("landmark")
+                                .field("address")
+                                .field("area")
+                                .field("location")
+                )
                 //.setPostFilter(QueryBuilders.rangeQuery("age").from(12).to(18))     // Filter
                 .setFrom(0).setSize(60).setExplain(true)
                 .get();
-
         SearchHit[] results = response.getHits().getHits();
         System.out.println("Current results: " + results.length);
-
-        List<Object> resultResponse = new ArrayList<Object>();
-
         for (SearchHit hit : results) {
             System.out.println("------------------------------");
             Map<String,Object> result = hit.getSource();
@@ -151,7 +142,7 @@ public class ESResource {
             esResource.esDeepSearch(client);
             deleteDocument(client, "kodcucom", "article", "1");
             // updateDocument(client, "kodcucom", "article", "1", "tags", "big-data");
-            searchDocument(client, "shop_directory", "shop", "shopType", "mobile");
+            searchDocument(client, "shop_directory", "shop", "shopType", "Parlor");
             esResource.nodeClose();
         } catch (Exception e) {
             e.printStackTrace();
